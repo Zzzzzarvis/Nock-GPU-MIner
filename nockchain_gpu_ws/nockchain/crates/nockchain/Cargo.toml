@@ -1,0 +1,49 @@
+[package]
+name = "nockchain"
+build = "build.rs"
+publish = false
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+hoonc.workspace = true
+nockapp.workspace = true
+kernels = { workspace = true, features = ["dumb"] }
+nockchain-bitcoin-sync.workspace = true
+nockvm.workspace = true
+nockvm_macros.workspace = true
+
+bitcoincore-rpc.workspace = true
+bs58.workspace = true
+clap.workspace = true
+equix.workspace = true
+libp2p = { workspace = true, features = [
+    "ping",
+    "kad",
+    "identify",
+    "quic",
+    "tls",
+    "dns",
+    "tokio",
+    "macros",
+    "request-response",
+    "cbor",
+] }
+nockchain-libp2p-io.workspace = true
+tempfile = { workspace = true }
+termcolor.workspace = true
+tokio = { workspace = true, features = ["full"] }
+tracing.workspace = true
+tracing-test.workspace = true
+
+zkvm-jetpack.workspace = true
+
+[build-dependencies]
+vergen = { workspace = true, features = [
+    "build",
+    "cargo",
+    "git",
+    "gitcl",
+    "rustc",
+    "si",
+] }

@@ -1,0 +1,9 @@
+.data.*
+/hoonc
+test-leader
+test-follower
+.nockchain-identity
+.nockchain-identity.peerid
+target
+assets/*.jam
+!crates/nockapp/test-jams

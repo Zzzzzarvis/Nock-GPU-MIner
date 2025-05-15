@@ -1,0 +1,21 @@
+[package]
+name = "nockchain-bitcoin-sync"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+zkvm-jetpack.workspace = true
+
+nockapp = { workspace = true }
+nockvm = { workspace = true }
+nockvm_macros = { workspace = true }
+
+bitcoincore-rpc.workspace = true
+ibig = { workspace = true }
+tokio = { workspace = true, features = [
+    "rt",
+    "macros",
+    "rt-multi-thread",
+    "sync",
+] }
+tracing = { workspace = true }
